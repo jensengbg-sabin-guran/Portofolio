@@ -1,0 +1,122 @@
+html    {
+    background-color: #000000;
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: aliceblue;
+    margin-left: 100px;
+    margin-right: 100px;
+    background-image: url(/Resources/pics/bgme.jpg);
+    font-size: 14px;
+    line-height: 20px;
+    font-family: 'Lexend Mega', sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+
+
+
+nav {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 3.5fr 0.5fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+}
+
+
+.Blank { grid-area: 1 / 5 / 2 / 7; }
+.Contact { grid-area: 1 / 6 / 2 / 7; }
+.Blog { grid-area: 1 / 4 / 2 / 5; }
+.Work { grid-area: 1 / 3 / 2 / 4; }
+.About { grid-area: 1 / 2 / 2 / 3; }
+.Home { grid-area: 1 / 1 / 2 / 2; }
+
+
+nav {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 3.5fr 0.5fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". . . . . .";
+}
+
+main  {
+    display: block;
+    padding-top: 305px;
+    padding-bottom: 35px;
+    -webkit-box-orient: vertical;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+
+}
+
+.submitbutton {
+    background: #2f2f31;
+    transform: rotateX(0.003deg);
+    height: 100vh;
+    color: #ffffff;
+}
+
+
+.a {
+    color: yellow;
+    text-decoration: none;
+    font-size: 2em;
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 0.5em 2em;
+    border: 2px solid yellow;
+    transition: .02s .2s cubic-bezier(.1, 0, .1, 1);
+    height: auto;
+
+}
+
+.a::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background: yellow;
+    transition: 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1), left 0.3s cubic-bezier(0.1, 0, 0.1, 1);
+    z-index: -1;
+  }
+
+  .a::after {
+    content: "";
+    display: inline-block;
+    background-image: url("https://image.flaticon.com/icons/png/128/109/109617.png");
+    position: absolute;
+    top: 0;
+    left: calc(100% - 3em);
+    right: 3em;
+    bottom: 0;
+    background-size: 1.5em;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: right 0.3s cubic-bezier(0.1, 0, 0.1, 1);
+  }
+  .a:hover {
+    padding: 0.5em 3.5em 0.5em 0.5em;
+  }
+  .a:hover::before {
+    left: calc(100% - 3em);
+    right: 0;
+    transition: 0.3s cubic-bezier(0.1, 0, 0.1, 1), left 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
+  }
+  .a:hover::after {
+    right: 0;
+    transition: right 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
+  }
+  
